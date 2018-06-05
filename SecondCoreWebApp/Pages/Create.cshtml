@@ -1,0 +1,24 @@
+﻿@page
+@model CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    <p>
+        Enter the contact's name and email address.
+    </p>
+    <div asp-validation-summary="All"></div>
+    <form method="POST">
+        <div>Name: <input asp-for="Customer.Name" /></div>
+        <div>Email: <input asp-for="Customer.Email" /></div>
+        <input type="submit" asp-page-handler="JoinList" value="Join" title="Join" />
+        <input type="submit" asp-page-handler="JoinListUC" value="JOIN UC" title="Join w/ all upper case" />
+    </form>
+</body>
+</html>
